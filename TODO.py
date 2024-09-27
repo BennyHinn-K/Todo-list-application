@@ -16,6 +16,8 @@ st.subheader('Interactive To-Do List')
 new_task = st.text_input('Add a new task',placeholder="1:00-2:00 am -> Cook Lunch")
 
 
+select_option = st.selectbox("select a day",options=["Monday", "Tuesday", "Wednesday", "Thursday", "Friday","Saturday","Sunday"])
+st.write(select_option)
 # Add task button
 if st.button('Add Task'):
     st.session_state.todo_list.append(new_task)
